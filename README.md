@@ -123,26 +123,25 @@ Main entities:
 
 # Project Structure
 
-```bash
+```
 UmaStarGam/
-|
-├── client/                 # ReactJS frontend
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── hooks/
-│   ├── services/
-│   └── store/
-|
-├── server/                 # NestJS backend
-│   ├── src/
-│   ├── auth/
-│   ├── users/
-│   ├── posts/
-│   ├── comments/
-│   └── prisma/
-|
-└── README.md
+  client/                 # ReactJS frontend
+    src/
+    components/
+    pages/
+    hooks/
+    services/
+    store/
+  
+  server/                 # NestJS backend
+    src/
+    auth/
+    users/
+    posts/
+    comments/
+    prisma/
+  
+  README.md
 ```
 # Installation
 
