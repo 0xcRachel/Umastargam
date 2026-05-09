@@ -125,7 +125,7 @@ Main entities:
 
 ```bash
 UmaStarGam/
-│
+|
 ├── client/                 # ReactJS frontend
 │   ├── src/
 │   ├── components/
@@ -133,7 +133,7 @@ UmaStarGam/
 │   ├── hooks/
 │   ├── services/
 │   └── store/
-│
+|
 ├── server/                 # NestJS backend
 │   ├── src/
 │   ├── auth/
@@ -141,60 +141,83 @@ UmaStarGam/
 │   ├── posts/
 │   ├── comments/
 │   └── prisma/
-│
+|
 └── README.md
-Installation
-Clone Repository
+```
+# Installation
+
+## Clone Repository
+
+```bash
 git clone https://github.com/your-username/UmaStarGam.git
 cd UmaStarGam
-Frontend Setup
+```
+
+## Frontend Setup
+
+```bash
 cd client
 npm install
 npm run dev
+```
 
 Frontend server:
 
 http://localhost:5173
-Backend Setup
+
+## Backend Setup
+
+```bash
 cd server
 npm install
+```
 
-Create .env file:
+Create `.env` file:
 
+```env
 DATABASE_URL=""
 JWT_SECRET=""
 PORT=3000
+```
 
-Run database migration:
+## Database Migration
 
+```bash
 npx prisma migrate dev
+```
 
-Start backend server:
+## Start Backend Server
 
+```bash
 npm run start:dev
+```
 
 Backend server:
 
 http://localhost:3000
-Future Plans
-Realtime notifications
-Chat system
-AI-generated captions
-Reels / short videos
-Mobile application
-Recommendation system
-Creator analytics dashboard
-Goals
+
+# Future Plans
+
+- Realtime notifications
+- Chat system
+- AI-generated captions
+- Reels / short videos
+- Mobile application
+- Recommendation system
+- Creator analytics dashboard
+
+# Goals
 
 UmaStarGam aims to become a platform where users can combine creativity, blogging, and social interaction in one modern ecosystem.
 
 The project prioritizes:
 
-Clean UI/UX
-Performance
-Scalability
-Community interaction
-Creator freedom
-License
+- Clean UI/UX
+- Performance
+- Scalability
+- Community interaction
+- Creator freedom
+
+# License
 
 MIT License
