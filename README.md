@@ -6,6 +6,8 @@ The platform allows users to create posts, upload images, interact with communit
 
 ---
 
+<img src="https://i.pinimg.com/736x/9b/66/67/9b66674874d39b85c3a1cdacfa5b23e3.jpg" width="24px" height="24px" >
+
 # Overview
 
 UmaStarGam combines social media interaction with long-form content creation.
