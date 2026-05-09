@@ -652,4 +652,4 @@ A: Tạo issue trên GitHub với chi tiết đầy đủ về lỗi.
 
 **Phiên bản:** 1.0  
 **Cập nhật lần cuối:** May 10, 2026  
-**Tác giả:** UmaStarGam Team (0xcRachel and Team)
+**Tác giả:** UmaStarGam Team
