@@ -313,7 +313,7 @@ Development
     
         ▼
     
-    All Pass ✓
+    All Pass
 ```
 
 ---
