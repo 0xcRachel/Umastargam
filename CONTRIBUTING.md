@@ -68,4 +68,4 @@ test: add tests
 
 Feel free to open an issue or discussion for any questions about contributing.
 
-Thank you for making UmaStarGam better! 🙌
+Thank you for making UmaStarGam better!
