@@ -1,23 +1,23 @@
-# Workflow - Hoạt động của Dự án UmaStarGam
+# Workflow - UmaStarGam Project Operations
 
-Tài liệu này mô tả chi tiết quy trình hoạt động của dự án UmaStarGam từ phía người dùng, phía lập trình viên, cho đến quá trình triển khai.
-
----
-
-## Mục lục
-
-1. [Tổng quan kiến trúc](#tổng-quan-kiến-trúc)
-2. [Quy trình người dùng](#quy-trình-người-dùng)
-3. [Quy trình phát triển](#quy-trình-phát-triển)
-4. [Quy trình dữ liệu](#quy-trình-dữ-liệu)
-5. [Quy trình CI/CD](#quy-trình-cicd)
-6. [Quy trình đóng góp](#quy-trình-đóng-góp)
+This document provides a detailed description of the project's operational processes from the user's perspective, the developer's perspective, to the deployment process.
 
 ---
 
-## Tổng quan kiến trúc
+## Table of Contents
 
-### Kiến trúc 3 tầng
+1. [Architecture Overview](#architecture-overview)
+2. [User Workflow](#user-workflow)
+3. [Development Workflow](#development-workflow)
+4. [Data Flow](#data-flow)
+5. [CI/CD Pipeline](#cicd-pipeline)
+6. [Contribution Process](#contribution-process)
+
+---
+
+## Architecture Overview
+
+### 3-Tier Architecture
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -45,21 +45,21 @@ Tài liệu này mô tả chi tiết quy trình hoạt động của dự án Um
 └─────────────────────────────────────────────────────┘
 ```
 
-### Thành phần chính
+### Core Components
 
-| Thành phần | Vai trò | Công nghệ |
-|-----------|--------|----------|
-| **Frontend** | Giao diện người dùng | ReactJS, Tailwind CSS, Vite |
-| **Backend** | Xử lý logic, API | NestJS, Passport.js |
-| **Database** | Lưu trữ dữ liệu | PostgreSQL, Prisma ORM |
-| **Storage** | Lưu trữ hình ảnh | Cloudinary, Supabase |
-| **Auth** | Xác thực người dùng | JWT, OAuth |
+| Component | Role | Technology |
+|-----------|------|----------|
+| **Frontend** | User Interface | ReactJS, Tailwind CSS, Vite |
+| **Backend** | Business Logic & API | NestJS, Passport.js |
+| **Database** | Data Storage | PostgreSQL, Prisma ORM |
+| **Storage** | Image Storage | Cloudinary, Supabase |
+| **Auth** | User Authentication | JWT, OAuth |
 
 ---
 
-## Quy trình người dùng
+## User Workflow
 
-### 1. Quy trình Đăng ký (Registration)
+### 1. Registration Process
 
 ```
 User --> [Fill Registration Form]
@@ -93,7 +93,7 @@ User --> [Fill Registration Form]
       User --> Dashboard
 ```
 
-### 2. Quy trình Đăng nhập (Login)
+### 2. Login Process
 
 ```
 User --> [Enter Credentials]
@@ -117,7 +117,7 @@ User --> [Enter Credentials]
       User --> Feed/Dashboard
 ```
 
-### 3. Quy trình Tạo Bài Viết (Create Post)
+### 3. Create Post Process
 
 ```
 User --> [Compose Post]
@@ -153,7 +153,7 @@ User --> [Compose Post]
       Update user's feed
 ```
 
-### 4. Quy trình Tương tác Xã hội (Social Interaction)
+### 4. Social Interaction Process
 
 ```
 ┌─ Like Post
@@ -181,7 +181,7 @@ User --> [Compose Post]
    └─ Update followers count
 ```
 
-### 5. Quy trình Xem Feed
+### 5. View Feed Process
 
 ```
 User opens app
@@ -222,9 +222,9 @@ Display in UI
 
 ---
 
-## Quy trình phát triển
+## Development Workflow
 
-### 1. Quy trình Thiết lập Môi trường
+### 1. Environment Setup Process
 
 ```
 Developer clones repo
@@ -245,12 +245,12 @@ Developer clones repo
           └─ npm run start:dev
 
         ▼
-   Cả 2 service chạy
+   Both services running
    - Frontend: http://localhost:5173
    - Backend: http://localhost:3000
 ```
 
-### 2. Quy trình Phát triển Tính năng
+### 2. Feature Development Process
 
 ```
 1. Create Feature Branch
@@ -289,7 +289,7 @@ Developer clones repo
    └─ Delete feature branch
 ```
 
-### 3. Quy trình Build & Test
+### 3. Build & Test Process
 
 ```
 Development
@@ -318,9 +318,9 @@ Development
 
 ---
 
-## Quy trình dữ liệu
+## Data Flow
 
-### 1. Luồng dữ liệu Tạo Bài Viết
+### 1. Create Post Data Flow
 
 ```
 Frontend                      Backend                    Database
@@ -349,7 +349,7 @@ Frontend                      Backend                    Database
        (Show post)  │                          │             │
 ```
 
-### 2. Luồng dữ liệu Lấy Feed
+### 2. Get Feed Data Flow
 
 ```
 Frontend                      Backend                    Database
@@ -378,7 +378,7 @@ Frontend                      Backend                    Database
        (UI Updates) │                          │             │
 ```
 
-### 3. Luồng dữ liệu Authentication
+### 3. Authentication Data Flow
 
 ```
 Frontend                      Backend
@@ -415,9 +415,9 @@ Frontend                      Backend
 
 ---
 
-## Quy trình CI/CD
+## CI/CD Pipeline
 
-### 1. Pipeline Deployment
+### 1. Deployment Pipeline
 
 ```
 Developer Push to Main Branch
@@ -454,7 +454,7 @@ GitHub Actions triggered
     └─ Failure ──────────────> Alert & Stop
 ```
 
-### 2. Deployment Staging
+### 2. Staging Deployment
 
 ```
 Staging Environment
@@ -493,9 +493,9 @@ Rollback Plan
 
 ---
 
-## Quy trình đóng góp
+## Contribution Process
 
-### Quy trình Phê duyệt PR
+### PR Approval Process
 
 ```
 Contributor
@@ -546,9 +546,9 @@ Contributor
 
 ---
 
-## Quy trình Quản lý Dự án
+## Project Management Workflow
 
-### Tầng lớp Phát triển
+### Development Layers
 
 ```
 User Requirements
@@ -592,7 +592,7 @@ Release
 
 ---
 
-## Quy trình Bảo mật
+## Security Workflow
 
 ### Security Flow
 
@@ -624,32 +624,32 @@ Code Security
 
 ---
 
-## Tài liệu tham khảo
+## Documentation References
 
-| Tài liệu | Nội dung |
-|---------|---------|
-| [README.md](README.md) | Tổng quan dự án |
-| [DEVELOPMENT.md](DEVELOPMENT.md) | Hướng dẫn phát triển |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Hướng dẫn đóng góp |
+| Document | Content |
+|----------|---------|
+| [README.md](README.md) | Project Overview |
+| [DEVELOPMENT.md](DEVELOPMENT.md) | Development Guide |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contributing Guide |
 
 ---
 
 ## FAQ
 
-**Q: Làm thế nào để bắt đầu phát triển?**
-A: Xem [DEVELOPMENT.md](DEVELOPMENT.md) để thiết lập môi trường.
+**Q: How do I start development?**
+A: Check [DEVELOPMENT.md](DEVELOPMENT.md) for environment setup.
 
-**Q: Quy trình đóng góp như thế nào?**
-A: Xem [CONTRIBUTING.md](CONTRIBUTING.md) để biết chi tiết.
+**Q: What is the contribution process?**
+A: Check [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
-**Q: Tôi cần quyền gì để deploy?**
-A: Liên hệ quản trị viên dự án để được cấp quyền trên Vercel, Railway và Supabase.
+**Q: What permissions do I need to deploy?**
+A: Contact the project administrator to get access to Vercel, Railway, and Supabase.
 
-**Q: Làm thế nào để báo lỗi?**
-A: Tạo issue trên GitHub với chi tiết đầy đủ về lỗi.
+**Q: How do I report a bug?**
+A: Create an issue on GitHub with detailed information about the bug.
 
 ---
 
-**Phiên bản:** 1.0  
-**Cập nhật lần cuối:** May 10, 2026  
-**Tác giả:** UmaStarGam Team
+**Version:** 1.0  
+**Last Updated:** May 10, 2026  
+**Author:** UmaStarGam Team
